@@ -109,6 +109,12 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Projects') }}</span></a>
             </li>
+            <!-- Nav Item - ManPower -->
+            <li class="nav-item {{ Nav::isRoute('manages.man-powers.index') }}">
+                <a class="nav-link" href="{{ route('manages.man-powers.index') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>{{ __('ManPowers') }}</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
