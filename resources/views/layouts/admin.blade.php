@@ -106,13 +106,13 @@
             <!-- Nav Item - Projects -->
             <li class="nav-item {{ Nav::isRoute('manages.projects.index') }}">
                 <a class="nav-link" href="{{ route('manages.projects.index') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-folder"></i>
                     <span>{{ __('Projects') }}</span></a>
             </li>
-            <!-- Nav Item - ManPower -->
+            <!-- Nav Item - ManPower , tasks-->
             <li class="nav-item {{ Nav::isRoute('manages.man-powers.index') }}">
                 <a class="nav-link" href="{{ route('manages.man-powers.index') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-users"></i>
                     <span>{{ __('ManPowers') }}</span></a>
             </li>
 
@@ -122,7 +122,7 @@
             <!-- Nav Item - Report -->
             <li class="nav-item {{ Nav::isRoute('report-project.index') }}">
                 <a class="nav-link" href="{{ route('report-project.index') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-chart-line"></i>
                     <span>{{ __('Report Projects') }}</span></a>
             </li>
 
