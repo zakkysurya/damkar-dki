@@ -6,6 +6,8 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ManPowerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ReportProjectController;
+use App\Http\Controllers\TaskController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,6 +70,20 @@ Route::group(['middleware' => ['auth']], function () {
             Route::put("update", [ManPowerController::class, 'update'])->name('update');
             ## Delete
             Route::post("destroy", [ManPowerController::class, 'destroy'])->name('destroy');
+        });
+        ## Grouping Prefix - tasks
+        Route::prefix('tasks')->name('tasks.')->group(function () {
+            ## Main page
+            Route::get("/", [TaskController::class, 'index'])->name('index');
+            ## Access for ajax datatable
+            Route::get("data-table", [TaskController::class, 'getDataTable'])->name('data-table');
+            Route::get("show", [TaskController::class, 'show'])->name('show');
+            ## Create
+            Route::post("store", [TaskController::class, 'store'])->name('store');
+            ## Update
+            Route::put("update", [TaskController::class, 'update'])->name('update');
+            ## Delete
+            Route::post("destroy", [TaskController::class, 'destroy'])->name('destroy');
         });
     });
 });/*END: middleware*/
