@@ -109,11 +109,17 @@
                     <i class="fas fa-fw fa-folder"></i>
                     <span>{{ __('Projects') }}</span></a>
             </li>
-            <!-- Nav Item - ManPower , tasks-->
+            <!-- Nav Item - ManPowers -->
             <li class="nav-item {{ Nav::isRoute('manages.man-powers.index') }}">
                 <a class="nav-link" href="{{ route('manages.man-powers.index') }}">
                     <i class="fas fa-fw fa-users"></i>
                     <span>{{ __('ManPowers') }}</span></a>
+            </li>
+            <!-- Nav Item - Tasks -->
+            <li class="nav-item {{ Nav::isRoute('manages.tasks.index') }}">
+                <a class="nav-link" href="{{ route('manages.tasks.index') }}">
+                    <i class="fas fa-fw fa-tasks"></i>
+                    <span>{{ __('Tasks') }}</span></a>
             </li>
 
             <!-- Divider -->
@@ -242,6 +248,9 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+
+    <!-- sweetalert2 v11.12.2-->
+    <script src="{{ asset('sweetalert2@11') }}"></script>
 
     <!-- JS: LOADER PAGE -->
     <script>
