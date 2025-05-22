@@ -33,5 +33,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/data-table', [ReportProjectController::class, 'getDataTable'])->name('data-table');
         ## Detail
         Route::get('/detail/{project}/{man_power}', [ReportProjectController::class, 'showDetail'])->name('detail');
+        ## Export excel
+        Route::get('export', [ReportProjectController::class, 'export'])->name('export');
     });
 });/*END: middleware*/

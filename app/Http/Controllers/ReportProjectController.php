@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
+use App\Exports\ReportProjectExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ReportProjectController extends Controller
 {
@@ -70,5 +72,10 @@ class ReportProjectController extends Controller
             ->get();
 
         return view('report_project.detail', compact('project', 'manPower', 'tasks'));
+    }
+
+    public function export()
+    {
+        return Excel::download(new ReportProjectExport, 'report_project.xlsx');
     }
 }

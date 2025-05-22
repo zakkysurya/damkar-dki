@@ -13,6 +13,7 @@
                               <h5 class="text-dark fw-bold">Data</h5>
                         </div>
                         <div class="col-6 d-flex justify-content-end">
+                              <a href="{{ route('report-project.export') }}" class="btn btn-sm btn-success">Export to Excel</a>
                         </div>
                   </div>
             </div>
