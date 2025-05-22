@@ -2208,3 +2208,91 @@
 #55 C:\\Users\\user\\Documents\\PROJECTS\\laravel\\damkar-dki\\server.php(21): require_once('C:\\\\Users\\\\user\\\\D...')
 #56 {main}
 "} 
+[2025-05-22 13:58:29] local.ERROR: Command "make:helper" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:export
+    make:factory
+    make:import
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:helper\" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:export
+    make:factory
+    make:import
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view at C:\\Users\\user\\Documents\\PROJECTS\\laravel\\damkar-dki\\vendor\\symfony\\console\\Application.php:726)
+[stacktrace]
+#0 C:\\Users\\user\\Documents\\PROJECTS\\laravel\\damkar-dki\\vendor\\symfony\\console\\Application.php(284): Symfony\\Component\\Console\\Application->find('make:helper')
+#1 C:\\Users\\user\\Documents\\PROJECTS\\laravel\\damkar-dki\\vendor\\symfony\\console\\Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\\user\\Documents\\PROJECTS\\laravel\\damkar-dki\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\user\\Documents\\PROJECTS\\laravel\\damkar-dki\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 

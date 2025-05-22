@@ -27,7 +27,7 @@ class ProjectController extends Controller
         ## Abort jika request bukan AJAX
         abort_unless($request->ajax(), 400, 'Maaf tidak dapat melanjutkan request.');
         try {
-            ## GET DATA accounts
+            ## GET DATA projects
             $data = Project::query();
             ## Total records
             $totalRecords = $data->count();
@@ -228,7 +228,7 @@ class ProjectController extends Controller
     }
 
     /*
-    * Proses delete account
+    * Proses delete project
     */
     public function destroy(Request $request)
     {
