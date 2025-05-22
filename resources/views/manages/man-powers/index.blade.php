@@ -456,5 +456,3 @@
       });
 </script>
 @endsection
-
-```
