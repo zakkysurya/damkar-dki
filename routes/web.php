@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ReportProjectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,16 +16,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
+## Grouping Middleware: Auth
+Route::group(['middleware' => ['auth']], function () {
+    ## Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/profile', 'ProfileController@index')->name('profile');
-Route::put('/profile', 'ProfileController@update')->name('profile.update');
-
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+    ## Grouping Prefix - report project
+    Route::prefix('report-project')->name('report-project.')->group(function () {
+        ## Main page
+        Route::get('/', [ReportProjectController::class, 'index'])->name('index');
+        ## Access for ajax datatable
+        Route::get('/data-table', [ReportProjectController::class, 'getDataTable'])->name('data-table');
+        ## Detail
+        Route::get('/detail/{project}/{man_power}', [ReportProjectController::class, 'showDetail'])->name('detail');
+    });
+});/*END: middleware*/
