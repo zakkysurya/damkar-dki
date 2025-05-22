@@ -99,6 +99,20 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Dashboard') }}</span></a>
             </li>
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                {{ __('Manages') }}
+            </div>
+            <!-- Nav Item - Projects -->
+            <li class="nav-item {{ Nav::isRoute('manages.projects.index') }}">
+                <a class="nav-link" href="{{ route('manages.projects.index') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>{{ __('Projects') }}</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
             <!-- Nav Item - Report -->
             <li class="nav-item {{ Nav::isRoute('report-project.index') }}">
                 <a class="nav-link" href="{{ route('report-project.index') }}">
